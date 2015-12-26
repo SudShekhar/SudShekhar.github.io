@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://sudshekhar.github.io
+title: IRead 
+subtitle: Just another Blog.
+author: Sudhanshu Shekhar
 simple_search: https://www.google.com/search
-description:
+description: A blog about random code samples that I find interesting.
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
