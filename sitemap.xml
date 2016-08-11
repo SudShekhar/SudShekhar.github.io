@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://sudshekhar.github.io/blog/2016/08/11/back-after-a-long-time/</loc>
+    <lastmod>2016-08-11T21:54:44+05:30</lastmod>
+  </url>
+  <url>
     <loc>http://sudshekhar.github.io/blog/2015/12/26/moving-over-to-octopress/</loc>
     <lastmod>2015-12-26T20:00:07+05:30</lastmod>
   </url>

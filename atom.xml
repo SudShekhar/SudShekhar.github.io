@@ -4,7 +4,7 @@
   <title><![CDATA[IRead]]></title>
   <link href="http://sudshekhar.github.io/atom.xml" rel="self"/>
   <link href="http://sudshekhar.github.io/"/>
-  <updated>2015-12-26T20:24:05+05:30</updated>
+  <updated>2016-08-11T23:00:24+05:30</updated>
   <id>http://sudshekhar.github.io/</id>
   <author>
     <name><![CDATA[Sudhanshu Shekhar]]></name>
@@ -12,6 +12,68 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Back After a Long Time]]></title>
+    <link href="http://sudshekhar.github.io/blog/2016/08/11/back-after-a-long-time/"/>
+    <updated>2016-08-11T21:54:44+05:30</updated>
+    <id>http://sudshekhar.github.io/blog/2016/08/11/back-after-a-long-time</id>
+    <content type="html"><![CDATA[<p>Almost a year after I created my first blog post on moving to Octopress, I
+remembered about it. To be honest, I never really bothered to read about
+Octopress properly and thus, quite simply forgot how to add new posts/create
+pages once I changed my laptop. (yup, this is exactly why my first post was a How-To
+guide)</p>
+
+<h2>Getting started. Again.</h2>
+
+<p>Thing about blogging is, that it&rsquo;s only interesting if you do it regularly. And
+after a long time, I&rsquo;ve felt the desire to put my writing out in the public
+domain. Maybe it will make you laugh, maybe it might teach you something. It
+will definitely give me something to do!</p>
+
+<p>I am planning to write regularly now. What will I write about? Mostly things
+that I read, links that I find useful and sometimes, code.</p>
+
+<p>Why sometimes code? Because
+ - There are plenty more talented people than me out there
+ - I haven&rsquo;t really mastered anything so well to be able to write those</p>
+
+<p>Still, I will write on topics which I find out about and no better
+resource/book already exists on the same.</p>
+
+<h3>Things I am working on</h3>
+
+<p>In no specific order:</p>
+
+<ul>
+<li><p>Android app : A lot left to learn here. Planning to release an app in
+  production soon</p></li>
+<li><p>Django open source : I&rsquo;ve learned a lot of Django over the last two years
+  and created plenty of code. But there is room for a lot of improvement.
+  Maybe creating and releasing an open source module/app will help enhance
+  my learning further.</p></li>
+<li><p>Proper routine : After having tried and failed at organization for ages,
+  maybe I will succeed this time?</p></li>
+</ul>
+
+
+<h3>Recommended links</h3>
+
+<p>Below are some good links</p>
+
+<ul>
+<li><p>Why I have my own website
+[<a href="http://www.onebigfluke.com/2012/07/focusing-on-positives-why-i-have-my-own.html">http://www.onebigfluke.com/2012/07/focusing-on-positives-why-i-have-my-own.html</a> ]
+Admittedly, the main motivation for me to start writing again.</p></li>
+<li><p>Calvin and Hobbes - Not a link exactly but something that&rsquo;s a must read
+ anyhow. I had read 1 or two strips randomly but never really gotten the
+ essence of this comic. Now, having read a lot of them in one go, I can say
+ that Bill Watterson has created a character that is trully legendary. If
+ only we were all as imaginative :)</p></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Moving Over to Octopress]]></title>
