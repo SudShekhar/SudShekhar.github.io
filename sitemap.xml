@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://sudshekhar.github.io/blog/2016/08/13/getting-rid-of-username-in-django/</loc>
+    <lastmod>2016-08-13T00:42:56+05:30</lastmod>
+  </url>
+  <url>
     <loc>http://sudshekhar.github.io/blog/2016/08/11/back-after-a-long-time/</loc>
     <lastmod>2016-08-11T21:54:44+05:30</lastmod>
   </url>
@@ -16,5 +20,11 @@
   </url>
   <url>
     <loc>http://sudshekhar.github.io/about/</loc>
+  </url>
+  <url>
+    <loc>http://sudshekhar.github.io/blog/categories/django/</loc>
+  </url>
+  <url>
+    <loc>http://sudshekhar.github.io/blog/categories/programming/</loc>
   </url>
 </urlset>

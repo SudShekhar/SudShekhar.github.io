@@ -4,7 +4,7 @@
   <title><![CDATA[IRead]]></title>
   <link href="http://sudshekhar.github.io/atom.xml" rel="self"/>
   <link href="http://sudshekhar.github.io/"/>
-  <updated>2016-08-11T23:00:24+05:30</updated>
+  <updated>2016-08-13T01:00:59+05:30</updated>
   <id>http://sudshekhar.github.io/</id>
   <author>
     <name><![CDATA[Sudhanshu Shekhar]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Getting Rid of Username in Django]]></title>
+    <link href="http://sudshekhar.github.io/blog/2016/08/13/getting-rid-of-username-in-django/"/>
+    <updated>2016-08-13T00:42:56+05:30</updated>
+    <id>http://sudshekhar.github.io/blog/2016/08/13/getting-rid-of-username-in-django</id>
+    <content type="html"><![CDATA[<p>Django is an awesome web framework. But one of the problems of being a very old and mature framework is that it
+comes with a lot of features and attributes that you just don&rsquo;t need anymore.
+Features such as username. Reddit, twitter etc have usernames but unless you&rsquo;re
+sure you will be soon joining their ranks, do you really want to burden your
+users with yet another username to remember?</p>
+
+<p>It makes a lot of sense to let go of the username completely and just use the
+email id as your identification field.</p>
+
+<p>Below are the steps, should you choose to do that</p>
+
+<h3>Replacing Django Auth User with an Email user</h3>
+
+<ul>
+<li><p>Install the
+  <a href="https://github.com/jcugat/django-custom-user"><strong>django-custom-user</strong></a> app</p>
+
+<pre><code> pip install django-custom-user
+</code></pre></li>
+<li><p>Add <code>custom_user</code> to your <code>INSTALLED_APPS</code> settings</p>
+
+<pre><code> INSTALLED_APPS = (
+     # other apps
+     'custom_user',
+ )
+</code></pre></li>
+<li><p>In your settings.py file, set <code>AUTH_USER_MODEL</code> to use <code>EmailUser</code>:</p>
+
+<pre><code> AUTH_USER_MODEL = 'custom_user.EmailUser'
+</code></pre></li>
+<li><p>Create the database tables:</p>
+
+<pre><code> python manage.py migrate
+</code></pre></li>
+<li><p>In whichever file you&rsquo;ve used the contrib user model add this line:</p>
+
+<pre><code> import settings.AUTH_USER_MODEL as User
+</code></pre></li>
+</ul>
+
+
+<p>And you&rsquo;re done! The app will automatically handle all the use cases you can
+think of and many you won&rsquo;t.</p>
+
+<p>This is why, Django is awesome.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Back After a Long Time]]></title>

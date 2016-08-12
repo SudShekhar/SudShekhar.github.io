@@ -9,8 +9,8 @@
   <meta name="author" content="Sudhanshu Shekhar">
 
   
-  <meta name="description" content="Almost a year after I created my first blog post on moving to Octopress, I
-remembered about it. To be honest, I never really bothered to read about &hellip;">
+  <meta name="description" content="Django is an awesome web framework. But one of the problems of being a very old and mature framework is that it
+comes with a lot of features and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +66,79 @@ remembered about it. To be honest, I never really bothered to read about &hellip
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/08/13/getting-rid-of-username-in-django/">Getting Rid of Username in Django</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-08-13T00:42:56+05:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>13</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>12:42 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Django is an awesome web framework. But one of the problems of being a very old and mature framework is that it
+comes with a lot of features and attributes that you just don&rsquo;t need anymore.
+Features such as username. Reddit, twitter etc have usernames but unless you&rsquo;re
+sure you will be soon joining their ranks, do you really want to burden your
+users with yet another username to remember?</p>
+
+<p>It makes a lot of sense to let go of the username completely and just use the
+email id as your identification field.</p>
+
+<p>Below are the steps, should you choose to do that</p>
+
+<h3>Replacing Django Auth User with an Email user</h3>
+
+<ul>
+<li><p>Install the
+  <a href="https://github.com/jcugat/django-custom-user"><strong>django-custom-user</strong></a> app</p>
+
+<pre><code> pip install django-custom-user
+</code></pre></li>
+<li><p>Add <code>custom_user</code> to your <code>INSTALLED_APPS</code> settings</p>
+
+<pre><code> INSTALLED_APPS = (
+     # other apps
+     'custom_user',
+ )
+</code></pre></li>
+<li><p>In your settings.py file, set <code>AUTH_USER_MODEL</code> to use <code>EmailUser</code>:</p>
+
+<pre><code> AUTH_USER_MODEL = 'custom_user.EmailUser'
+</code></pre></li>
+<li><p>Create the database tables:</p>
+
+<pre><code> python manage.py migrate
+</code></pre></li>
+<li><p>In whichever file you&rsquo;ve used the contrib user model add this line:</p>
+
+<pre><code> import settings.AUTH_USER_MODEL as User
+</code></pre></li>
+</ul>
+
+
+<p>And you&rsquo;re done! The app will automatically handle all the use cases you can
+think of and many you won&rsquo;t.</p>
+
+<p>This is why, Django is awesome.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -283,6 +356,10 @@ will be pushed to remote.</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/08/13/getting-rid-of-username-in-django/">Getting Rid of Username in Django</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2016/08/11/back-after-a-long-time/">Back After a Long Time</a>
