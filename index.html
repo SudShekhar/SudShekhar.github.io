@@ -9,8 +9,7 @@
   <meta name="author" content="Sudhanshu Shekhar">
 
   
-  <meta name="description" content="Django is an awesome web framework. But one of the problems of being a very old and mature framework is that it
-comes with a lot of features and &hellip;">
+  <meta name="description" content="Recently, I was trying to figure out the best way to track how I spend my time while in front of the computer. There are a lot of time tracking &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +65,85 @@ comes with a lot of features and &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/08/15/automated-screenshots-to-track-your-time-usage-in-mac/">Automated Screenshots to Track Your Time Usage in Mac</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-08-15T14:06:17+05:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>2:06 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Recently, I was trying to figure out the best way to track how I spend my time while in front of the computer. There are a lot of time tracking softwares available for OSX but it&rsquo;s not easy to find the best ones. Moreover, you might not be allowed to install third-party softwares on an office laptop (or might prefer a more DIY method).</p>
+
+<p>To achieve this, I recently setup a shell script to take automatic screenshots of my screen every 1 minute. This lets me quickly check exactly what I was doing at any specific point of time through out the day. Having a screenshot showing exactly what you were doing also provides more context than merely app name and usage.</p>
+
+<h2>Automating screen shots on mac</h2>
+
+<ul>
+<li>create a folder called <code>screenshots</code> in your home directory</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>mkdir ~/screenshots
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>create a script <code>screenshot.sh</code> in the home directory. Add the following lines in it.</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/sh</span>
+</span><span class='line'><span class="nv">fileName</span><span class="o">=</span>screenCapture <span class="c">#replace with whatever prefix you choose</span>
+</span><span class='line'><span class="nv">current_time</span><span class="o">=</span><span class="k">$(</span>date <span class="s2">&quot;+%Y.%m.%d-%H.%M.%S&quot;</span><span class="k">)</span>.jpg <span class="c">#current time in day, minutes with jpg extension</span>
+</span><span class='line'><span class="nv">new_file_name</span><span class="o">=</span><span class="nv">$filename</span>.<span class="nv">$current_time</span> <span class="c"># file name where screenshot is stored</span>
+</span><span class='line'>/usr/sbin/screencapture -x ~/screenshots/<span class="nv">$new_file_name</span> <span class="c">#you need to give full path to screencapture, -x doesn&#39;t produce the screen capture sound</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><p>Save the  file with executable permissions</p>
+
+<pre><code>  chmod +x screenshot.sh
+</code></pre></li>
+<li><p>Edit your crontab file, <code>vim /etc/crontab</code>. As root, add the following line and save it</p></li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>*   *   *   *   *   yourusername     /Users/yourusername/screenshot.sh  &gt;&gt; /tmp/screenshot.log 2&gt;<span class="p">&amp;</span>1
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And that&rsquo;s it! You should start seeing screenshots being stored in your <code>~/screenshots/</code> folder. If it isn&rsquo;t so, checkout the <code>/tmp/screenshot.log</code> file for errors generated and fix them.</p>
+
+<p><strong>Note</strong> : To reduce the frequency of screenshots, just edit the <code>/etc/crontab</code> file and update the frequency there.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -356,6 +434,10 @@ will be pushed to remote.</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/08/15/automated-screenshots-to-track-your-time-usage-in-mac/">Automated Screenshots to Track Your Time Usage in Mac</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2016/08/13/getting-rid-of-username-in-django/">Getting Rid of Username in Django</a>
